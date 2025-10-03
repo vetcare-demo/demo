@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - VetCare</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="images/paw.png" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="layout-body">
+    <header class="layout-header">
+      <header class="public-header">
+        <nav class="header-nav">
+          <div class="header-container">
+            <div class="header-content">
+              <div class="header-logo">
+                <a href="index.html" class="header-logo-link">
+                  <span class="header-logo-text">VetCare</span>
+                  <div class="header-logo-icon">
+                    <img
+                      src="images/paw.png"
+                      alt="VetCare Paw"
+                      class="header-logo-image default"
+                    />
+                    <img
+                      src="images/paw-dark.png"
+                      alt="VetCare Paw Hover"
+                      class="header-logo-image hover"
+                    />
+                  </div>
+                </a>
+              </div>
+
+              <div class="header-nav-desktop">
+                <a href="index.html" class="nav-item" aria-current="false"
+                  >Beranda</a
+                >
+                <a href="login.html" class="nav-item active" aria-current="page"
+                  >Login</a
+                >
+                <div class="register-btn-container">
+                  <a
+                    href="register.html"
+                    class="register-btn"
+                    aria-current="false"
+                  >
+                    Registrasi
+                  </a>
+                </div>
+              </div>
+
+              <div class="header-mobile-controls">
+                <button
+                  id="mobile-menu-button"
+                  type="button"
+                  class="mobile-menu-button"
+                  aria-controls="mobile-menu"
+                  aria-expanded="false"
+                >
+                  <span class="sr-only">Buka menu utama</span>
+                  <svg
+                    class="mobile-menu-icon hamburger"
+                    id="icon-hamburger"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  </svg>
+                  <svg
+                    class="mobile-menu-icon close hidden"
+                    id="icon-close"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div id="mobile-menu-backdrop" class="mobile-menu-backdrop"></div>
+
+          <div id="mobile-menu" class="mobile-menu">
+            <div class="mobile-menu-content">
+              <a
+                href="index.html"
+                class="nav-item mobile border-y"
+                aria-current="false"
+                >Beranda</a
+              >
+              <a
+                href="login.html"
+                class="nav-item mobile border-bottom active"
+                aria-current="page"
+                >Login</a
+              >
+              <a
+                href="register.html"
+                class="nav-item mobile"
+                aria-current="false"
+              >
+                Registrasi
+              </a>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </header>
+
+    <div id="page-content">
+      <div class="login-container">
+        <div class="login-wrapper">
+          <main class="login-main">
+            <div class="login-header">
+              <h2 class="login-title">Login ke akun anda</h2>
+              <p class="login-subtitle">
+                Atau
+                <a href="register.html" class="login-register-link">
+                  buat akun baru jika belum punya
+                </a>
+              </p>
+            </div>
+
+            <div class="login-form-container">
+              <form action="" method="" class="login-form">
+                <div class="login-field">
+                  <label for="username" class="login-label">Email</label>
+                  <input
+                    type="email"
+                    id="username"
+                    name="username"
+                    required
+                    autofocus
+                    class="login-input"
+                    placeholder="username@email.com"
+                  />
+                </div>
+
+                <div class="login-field">
+                  <label for="password" class="login-label">Password</label>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    required
+                    class="login-input"
+                    placeholder="Password Anda"
+                  />
+                </div>
+
+                <div class="login-field">
+                  <button type="submit" class="login-button">Masuk</button>
+                </div>
+              </form>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+
+    <footer class="layout-footer">
+      <footer class="public-footer">
+        <div class="footer-container">
+          <a href="index.html" class="footer-logo"> VetCare </a>
+          <p class="footer-description">
+            Solusi terpadu untuk kesehatan hewan peliharaan Anda, menyediakan
+            kemudahan reservasi janji temu dokter hewan secara online.
+          </p>
+          <p class="footer-copyright">
+            &copy;
+            <span class="footer-year">2025</span>
+            VetCare. Didesain dengan <span class="footer-heart">❤️</span> untuk
+            sahabat terbaik Anda.
+          </p>
+        </div>
+      </footer>
+    </footer>
+
+    <script src="js/script.js" type="module"></script>
+
+    <script src="js/loginModule.js"></script>
+  </body>
+</html>

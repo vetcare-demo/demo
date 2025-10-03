@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - VetCare</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="images/paw.png" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="layout-body">
+    <header class="layout-header">
+      <header class="public-header">
+        <nav class="header-nav">
+          <div class="header-container">
+            <div class="header-content">
+              <div class="header-logo">
+                <a href="index.html" class="header-logo-link">
+                  <span class="header-logo-text">VetCare</span>
+                  <div class="header-logo-icon">
+                    <img
+                      src="images/paw.png"
+                      alt="VetCare Paw"
+                      class="header-logo-image default"
+                    />
+                    <img
+                      src="images/paw-dark.png"
+                      alt="VetCare Paw Hover"
+                      class="header-logo-image hover"
+                    />
+                  </div>
+                </a>
+              </div>
+
+              <div class="header-nav-desktop">
+                <a href="index.html" class="nav-item" aria-current="false"
+                  >Beranda</a
+                >
+                <a href="login.html" class="nav-item" aria-current="false"
+                  >Login</a
+                >
+                <div class="register-btn-container">
+                  <a
+                    href="register.html"
+                    class="register-btn active"
+                    aria-current="page"
+                  >
+                    Registrasi
+                  </a>
+                </div>
+              </div>
+
+              <div class="header-mobile-controls">
+                <button
+                  id="mobile-menu-button"
+                  type="button"
+                  class="mobile-menu-button"
+                  aria-controls="mobile-menu"
+                  aria-expanded="false"
+                >
+                  <span class="sr-only">Buka menu utama</span>
+                  <svg
+                    class="mobile-menu-icon hamburger"
+                    id="icon-hamburger"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  </svg>
+                  <svg
+                    class="mobile-menu-icon close hidden"
+                    id="icon-close"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div id="mobile-menu-backdrop" class="mobile-menu-backdrop"></div>
+
+          <div id="mobile-menu" class="mobile-menu">
+            <div class="mobile-menu-content">
+              <a
+                href="index.html"
+                class="nav-item mobile border-y"
+                aria-current="false"
+                >Beranda</a
+              >
+              <a
+                href="login.html"
+                class="nav-item mobile border-bottom"
+                aria-current="false"
+                >Login</a
+              >
+              <a
+                href="register.html"
+                class="nav-item mobile register-active"
+                aria-current="page"
+              >
+                Registrasi
+              </a>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </header>
+
+    <div id="page-content">
+      <div class="register-container">
+        <div class="register-wrapper">
+          <main class="register-main">
+            <div class="register-header">
+              <h2 class="register-title">Daftar akun</h2>
+              <p class="register-subtitle">
+                Atau
+                <a href="login.html" class="register-login-link">
+                  masuk jika sudah punya akun
+                </a>
+              </p>
+            </div>
+
+            <div class="register-form-container">
+              <form action="" method="" class="register-form">
+                <div class="register-field">
+                  <label class="register-label">Daftar Sebagai</label>
+                  <div class="register-role-grid">
+                    <div>
+                      <input
+                        type="radio"
+                        id="role-pemilik"
+                        name="userType"
+                        value="owner"
+                        class="register-role-input"
+                        checked
+                      />
+                      <label for="role-pemilik" class="register-role-label">
+                        Pemilik Hewan
+                      </label>
+                    </div>
+                    <div>
+                      <input
+                        type="radio"
+                        id="role-vet"
+                        name="userType"
+                        value="veterinarian"
+                        class="register-role-input"
+                      />
+                      <label for="role-vet" class="register-role-label">
+                        Dokter Hewan
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="register-field">
+                  <label for="nama" class="register-label">Nama Lengkap</label>
+                  <input
+                    type="text"
+                    id="nama"
+                    name="name"
+                    required
+                    class="register-input"
+                    placeholder="Masukkan nama lengkap"
+                  />
+                </div>
+
+                <div class="register-field">
+                  <label for="email" class="register-label">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    class="register-input"
+                    placeholder="anda@email.com"
+                  />
+                </div>
+
+                <div
+                  id="spesialisasi-container"
+                  class="register-specialization-container"
+                >
+                  <label for="spesialisasi" class="register-label"
+                    >Spesialisasi</label
+                  >
+                  <input
+                    type="text"
+                    id="spesialisasi"
+                    name="specialization"
+                    class="register-input"
+                    placeholder="Contoh: Bedah, Dermatologi, dll."
+                  />
+                </div>
+
+                <div class="register-field">
+                  <label for="password" class="register-label">Password</label>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    required
+                    class="register-input"
+                    placeholder="Masukkan password"
+                  />
+                </div>
+
+                <div class="register-field">
+                  <button type="submit" class="register-button">
+                    Daftar Sekarang
+                  </button>
+                </div>
+              </form>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+
+    <footer class="layout-footer">
+      <footer class="public-footer">
+        <div class="footer-container">
+          <a href="index.html" class="footer-logo"> VetCare </a>
+          <p class="footer-description">
+            Solusi terpadu untuk kesehatan hewan peliharaan Anda, menyediakan
+            kemudahan reservasi janji temu dokter hewan secara online.
+          </p>
+          <p class="footer-copyright">
+            &copy;
+            <span class="footer-year">2025</span>
+            VetCare. Didesain dengan <span class="footer-heart">❤️</span> untuk
+            sahabat terbaik Anda.
+          </p>
+        </div>
+      </footer>
+    </footer>
+
+    <script src="js/script.js" type="module"></script>
+
+    <script src="js/roleModule.js"></script>
+  </body>
+</html>

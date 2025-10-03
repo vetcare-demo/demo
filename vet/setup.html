@@ -1,0 +1,826 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pengaturan Jadwal - VetCare</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="../images/paw.png" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body class="dashboard-layout-body">
+    <nav class="sidebar-nav" id="sidebar">
+      <div class="sidebar-menu-container">
+        <div class="sidebar-menu-list">
+          <a
+            href="vet.html"
+            class="sidebar-nav-link group"
+          >
+            <svg
+              class="sidebar-nav-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+              />
+            </svg>
+            Dasbor
+          </a>
+
+          <a
+            href="setup.html"
+            class="sidebar-nav-link group sidebar-nav-link-active"
+          >
+            <svg
+              class="sidebar-nav-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2-2v12a2 2 0 002 2z"
+              />
+            </svg>
+            Jadwal
+          </a>
+
+          <a
+            href="appointments.html"
+            class="sidebar-nav-link group"
+          >
+            <svg
+              class="sidebar-nav-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+              />
+            </svg>
+            Janji Temu
+          </a>
+
+          <a
+            href="profile.html"
+            class="sidebar-nav-link group"
+          >
+            <svg
+              class="sidebar-nav-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+              />
+            </svg>
+            Profil
+          </a>
+        </div>
+      </div>
+
+      <div class="sidebar-logout-container">
+        <a class="sidebar-logout-button" href="../login.html">
+          <svg
+            class="sidebar-nav-icon"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+            />
+          </svg>
+          Keluar
+        </a>
+      </div>
+    </nav>
+
+    <div class="dashboard-sidebar-overlay hidden" id="sidebar-overlay"></div>
+
+    <div class="dashboard-main-container">
+      <main class="dashboard-main-content">
+        <div id="content">
+          <div class="schedule-setup-dashboard">
+            <div class="schedule-setup-container">
+              <div class="pet-welcome-card">
+                <div class="pet-welcome-header">
+                  <div>
+                    <h1 class="pet-welcome-title">
+                      Pengaturan Jadwal Mingguan
+                    </h1>
+                    <p class="pet-welcome-subtitle">
+                      Atur jam kerja Anda untuk setiap hari dalam seminggu
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="schedule-grid-container">
+                <div class="schedule-day-card">
+                  <div class="schedule-day-header">
+                    <h3 class="schedule-day-title">Senin</h3>
+                  </div>
+                  <div class="schedule-day-content">
+                    <form
+                      method=""
+                      action=""
+                      class="schedule-form"
+                    >
+                      <div class="schedule-form-check">
+                        <input
+                          type="checkbox"
+                          name="isActive"
+                          value="true"
+                          id="monday-active"
+                          class="schedule-form-checkbox"
+                          checked="checked"
+                        />
+                        <label
+                          for="monday-active"
+                          class="schedule-form-check-label"
+                          >Bekerja di hari Senin</label
+                        >
+                      </div>
+
+                      <div class="schedule-time-inputs">
+                        <div class="schedule-time-group">
+                          <label for="monday-start" class="schedule-time-label"
+                            >Waktu Mulai</label
+                          >
+
+                          <input
+                            type="time"
+                            name="startTime"
+                            id="monday-start"
+                            class="schedule-time-input"
+                            value="08:00"
+                          />
+                        </div>
+                        <div class="schedule-time-group">
+                          <label for="monday-end" class="schedule-time-label"
+                            >Waktu Selesai</label
+                          >
+
+                          <input
+                            type="time"
+                            name="endTime"
+                            id="monday-end"
+                            class="schedule-time-input"
+                            value="16:00"
+                          />
+                        </div>
+                      </div>
+
+                      <button type="submit" class="schedule-btn-primary">
+                        <svg
+                          class="schedule-btn-icon"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                        Simpan Senin
+                      </button>
+                      <input type="hidden" name="dayOfWeek" value="1" />
+                    </form>
+
+                    <div class="schedule-existing-info">
+                      <p class="schedule-existing-title">Jadwal saat ini:</p>
+                      <p class="schedule-existing-time schedule-status-active">
+                        <span>08:00</span> - <span>16:00</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="schedule-day-card">
+                  <div class="schedule-day-header">
+                    <h3 class="schedule-day-title">Selasa</h3>
+                  </div>
+                  <div class="schedule-day-content">
+                    <form
+                      method=""
+                      action=""
+                      class="schedule-form"
+                    >
+                      <div class="schedule-form-check">
+                        <input
+                          type="checkbox"
+                          name="isActive"
+                          value="true"
+                          id="tuesday-active"
+                          class="schedule-form-checkbox"
+                        />
+                        <label
+                          for="tuesday-active"
+                          class="schedule-form-check-label"
+                          >Bekerja di hari Selasa</label
+                        >
+                      </div>
+
+                      <div class="schedule-time-inputs">
+                        <div class="schedule-time-group">
+                          <label for="tuesday-start" class="schedule-time-label"
+                            >Waktu Mulai</label
+                          >
+
+                          <input
+                            type="time"
+                            name="startTime"
+                            id="tuesday-start"
+                            class="schedule-time-input"
+                            value="08:00"
+                          />
+                        </div>
+                        <div class="schedule-time-group">
+                          <label for="tuesday-end" class="schedule-time-label"
+                            >Waktu Selesai</label
+                          >
+
+                          <input
+                            type="time"
+                            name="endTime"
+                            id="tuesday-end"
+                            class="schedule-time-input"
+                            value="17:00"
+                          />
+                        </div>
+                      </div>
+
+                      <button type="submit" class="schedule-btn-primary">
+                        <svg
+                          class="schedule-btn-icon"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                        Simpan Selasa
+                      </button>
+
+                      <input type="hidden" name="dayOfWeek" value="2" />
+                    </form>
+
+                    <div class="schedule-existing-info">
+                      <div>
+                        <p class="schedule-existing-title">Jadwal saat ini:</p>
+                        <p class="schedule-existing-none schedule-status-none">
+                          Belum diatur
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="schedule-day-card">
+                  <div class="schedule-day-header">
+                    <h3 class="schedule-day-title">Rabu</h3>
+                  </div>
+                  <div class="schedule-day-content">
+                    <form
+                      method=""
+                      action=""
+                      class="schedule-form"
+                    >
+                      <div class="schedule-form-check">
+                        <input
+                          type="checkbox"
+                          name="isActive"
+                          value="true"
+                          id="wednesday-active"
+                          class="schedule-form-checkbox"
+                          checked="checked"
+                        />
+                        <label
+                          for="wednesday-active"
+                          class="schedule-form-check-label"
+                          >Bekerja di hari Rabu</label
+                        >
+                      </div>
+
+                      <div class="schedule-time-inputs">
+                        <div class="schedule-time-group">
+                          <label
+                            for="wednesday-start"
+                            class="schedule-time-label"
+                            >Waktu Mulai</label
+                          >
+
+                          <input
+                            type="time"
+                            name="startTime"
+                            id="wednesday-start"
+                            class="schedule-time-input"
+                            value="08:00"
+                          />
+                        </div>
+                        <div class="schedule-time-group">
+                          <label for="wednesday-end" class="schedule-time-label"
+                            >Waktu Selesai</label
+                          >
+
+                          <input
+                            type="time"
+                            name="endTime"
+                            id="wednesday-end"
+                            class="schedule-time-input"
+                            value="16:00"
+                          />
+                        </div>
+                      </div>
+
+                      <button type="submit" class="schedule-btn-primary">
+                        <svg
+                          class="schedule-btn-icon"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                        Simpan Rabu
+                      </button>
+
+                      <input type="hidden" name="dayOfWeek" value="3" />
+                    </form>
+
+                    <div class="schedule-existing-info">
+                      <p class="schedule-existing-title">Jadwal saat ini:</p>
+                      <p class="schedule-existing-time schedule-status-active">
+                        <span>08:00</span> - <span>16:00</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="schedule-day-card">
+                  <div class="schedule-day-header">
+                    <h3 class="schedule-day-title">Kamis</h3>
+                  </div>
+                  <div class="schedule-day-content">
+                    <form
+                      method=""
+                      action=""
+                      class="schedule-form"
+                    >
+                      <div class="schedule-form-check">
+                        <input
+                          type="checkbox"
+                          name="isActive"
+                          value="true"
+                          id="thursday-active"
+                          class="schedule-form-checkbox"
+                        />
+                        <label
+                          for="thursday-active"
+                          class="schedule-form-check-label"
+                          >Bekerja di hari Kamis</label
+                        >
+                      </div>
+
+                      <div class="schedule-time-inputs">
+                        <div class="schedule-time-group">
+                          <label
+                            for="thursday-start"
+                            class="schedule-time-label"
+                            >Waktu Mulai</label
+                          >
+
+                          <input
+                            type="time"
+                            name="startTime"
+                            id="thursday-start"
+                            class="schedule-time-input"
+                            value="08:00"
+                          />
+                        </div>
+                        <div class="schedule-time-group">
+                          <label for="thursday-end" class="schedule-time-label"
+                            >Waktu Selesai</label
+                          >
+
+                          <input
+                            type="time"
+                            name="endTime"
+                            id="thursday-end"
+                            class="schedule-time-input"
+                            value="17:00"
+                          />
+                        </div>
+                      </div>
+
+                      <button type="submit" class="schedule-btn-primary">
+                        <svg
+                          class="schedule-btn-icon"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                        Simpan Kamis
+                      </button>
+
+                      <input type="hidden" name="dayOfWeek" value="4" />
+                    </form>
+
+                    <div class="schedule-existing-info">
+                      <div>
+                        <p class="schedule-existing-title">Jadwal saat ini:</p>
+                        <p class="schedule-existing-none schedule-status-none">
+                          Belum diatur
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="schedule-day-card">
+                  <div class="schedule-day-header">
+                    <h3 class="schedule-day-title">Jumat</h3>
+                  </div>
+                  <div class="schedule-day-content">
+                    <form
+                      method=""
+                      action=""
+                      class="schedule-form"
+                    >
+                      <div class="schedule-form-check">
+                        <input
+                          type="checkbox"
+                          name="isActive"
+                          value="true"
+                          id="friday-active"
+                          class="schedule-form-checkbox"
+                          checked="checked"
+                        />
+                        <label
+                          for="friday-active"
+                          class="schedule-form-check-label"
+                          >Bekerja di hari Jumat</label
+                        >
+                      </div>
+
+                      <div class="schedule-time-inputs">
+                        <div class="schedule-time-group">
+                          <label for="friday-start" class="schedule-time-label"
+                            >Waktu Mulai</label
+                          >
+
+                          <input
+                            type="time"
+                            name="startTime"
+                            id="friday-start"
+                            class="schedule-time-input"
+                            value="08:00"
+                          />
+                        </div>
+                        <div class="schedule-time-group">
+                          <label for="friday-end" class="schedule-time-label"
+                            >Waktu Selesai</label
+                          >
+
+                          <input
+                            type="time"
+                            name="endTime"
+                            id="friday-end"
+                            class="schedule-time-input"
+                            value="16:00"
+                          />
+                        </div>
+                      </div>
+
+                      <button type="submit" class="schedule-btn-primary">
+                        <svg
+                          class="schedule-btn-icon"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                        Simpan Jumat
+                      </button>
+
+                      <input type="hidden" name="dayOfWeek" value="5" />
+                    </form>
+
+                    <div class="schedule-existing-info">
+                      <p class="schedule-existing-title">Jadwal saat ini:</p>
+                      <p class="schedule-existing-time schedule-status-active">
+                        <span>08:00</span> - <span>16:00</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="schedule-day-card">
+                  <div class="schedule-day-header">
+                    <h3 class="schedule-day-title">Sabtu</h3>
+                  </div>
+                  <div class="schedule-day-content">
+                    <form
+                      method=""
+                      action=""
+                      class="schedule-form"
+                    >
+                      <div class="schedule-form-check">
+                        <input
+                          type="checkbox"
+                          name="isActive"
+                          value="true"
+                          id="saturday-active"
+                          class="schedule-form-checkbox"
+                        />
+                        <label
+                          for="saturday-active"
+                          class="schedule-form-check-label"
+                          >Bekerja di hari Sabtu</label
+                        >
+                      </div>
+
+                      <div class="schedule-time-inputs">
+                        <div class="schedule-time-group">
+                          <label
+                            for="saturday-start"
+                            class="schedule-time-label"
+                            >Waktu Mulai</label
+                          >
+
+                          <input
+                            type="time"
+                            name="startTime"
+                            id="saturday-start"
+                            class="schedule-time-input"
+                            value="08:00"
+                          />
+                        </div>
+                        <div class="schedule-time-group">
+                          <label for="saturday-end" class="schedule-time-label"
+                            >Waktu Selesai</label
+                          >
+
+                          <input
+                            type="time"
+                            name="endTime"
+                            id="saturday-end"
+                            class="schedule-time-input"
+                            value="17:00"
+                          />
+                        </div>
+                      </div>
+
+                      <button type="submit" class="schedule-btn-primary">
+                        <svg
+                          class="schedule-btn-icon"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                        Simpan Sabtu
+                      </button>
+
+                      <input type="hidden" name="dayOfWeek" value="6" />
+                    </form>
+
+                    <div class="schedule-existing-info">
+                      <div>
+                        <p class="schedule-existing-title">Jadwal saat ini:</p>
+                        <p class="schedule-existing-none schedule-status-none">
+                          Belum diatur
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="schedule-day-card">
+                  <div class="schedule-day-header">
+                    <h3 class="schedule-day-title">Minggu</h3>
+                  </div>
+                  <div class="schedule-day-content">
+                    <form
+                      method=""
+                      action=""
+                      class="schedule-form"
+                    >
+                      <div class="schedule-form-check">
+                        <input
+                          type="checkbox"
+                          name="isActive"
+                          value="true"
+                          id="sunday-active"
+                          class="schedule-form-checkbox"
+                        />
+                        <label
+                          for="sunday-active"
+                          class="schedule-form-check-label"
+                          >Bekerja di hari Minggu</label
+                        >
+                      </div>
+
+                      <div class="schedule-time-inputs">
+                        <div class="schedule-time-group">
+                          <label for="sunday-start" class="schedule-time-label"
+                            >Waktu Mulai</label
+                          >
+
+                          <input
+                            type="time"
+                            name="startTime"
+                            id="sunday-start"
+                            class="schedule-time-input"
+                            value="08:00"
+                          />
+                        </div>
+                        <div class="schedule-time-group">
+                          <label for="sunday-end" class="schedule-time-label"
+                            >Waktu Selesai</label
+                          >
+
+                          <input
+                            type="time"
+                            name="endTime"
+                            id="sunday-end"
+                            class="schedule-time-input"
+                            value="17:00"
+                          />
+                        </div>
+                      </div>
+
+                      <button type="submit" class="schedule-btn-primary">
+                        <svg
+                          class="schedule-btn-icon"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                        Simpan Minggu
+                      </button>
+
+                      <input type="hidden" name="dayOfWeek" value="7" />
+                    </form>
+
+                    <div class="schedule-existing-info">
+                      <div>
+                        <p class="schedule-existing-title">Jadwal saat ini:</p>
+                        <p class="schedule-existing-none schedule-status-none">
+                          Belum diatur
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="schedule-save-all-container">
+                <form
+                  method=""
+                  action=""
+                  id="save-all-form"
+                >
+                  <input type="hidden" name="day1_isActive" value="true" />
+                  <input type="hidden" name="day1_startTime" value="08:00" />
+                  <input type="hidden" name="day1_endTime" value="16:00" />
+
+                  <input type="hidden" name="day2_isActive" value="false" />
+                  <input type="hidden" name="day2_startTime" value="" />
+                  <input type="hidden" name="day2_endTime" value="" />
+
+                  <input type="hidden" name="day3_isActive" value="true" />
+                  <input type="hidden" name="day3_startTime" value="08:00" />
+                  <input type="hidden" name="day3_endTime" value="16:00" />
+
+                  <input type="hidden" name="day4_isActive" value="false" />
+                  <input type="hidden" name="day4_startTime" value="" />
+                  <input type="hidden" name="day4_endTime" value="" />
+
+                  <input type="hidden" name="day5_isActive" value="true" />
+                  <input type="hidden" name="day5_startTime" value="08:00" />
+                  <input type="hidden" name="day5_endTime" value="16:00" />
+
+                  <input type="hidden" name="day6_isActive" value="false" />
+                  <input type="hidden" name="day6_startTime" value="" />
+                  <input type="hidden" name="day6_endTime" value="" />
+
+                  <input type="hidden" name="day7_isActive" value="false" />
+                  <input type="hidden" name="day7_startTime" value="" />
+                  <input type="hidden" name="day7_endTime" value="" />
+
+                  <button type="submit" class="schedule-save-all-btn">
+                    <svg
+                      class="schedule-btn-icon"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    Simpan Jadwal Semua Hari
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <button
+      type="button"
+      class="dashboard-toggle-button"
+      id="mobile-menu-button"
+    >
+      <svg
+        class="dashboard-toggle-icon"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        id="arrow-icon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M9 5l7 7-7 7"
+        />
+      </svg>
+    </button>
+
+    <script src="../js/scheduleModule.js"></script>
+
+    <script src="../js/sidebarModule.js"></script>
+  </body>
+</html>

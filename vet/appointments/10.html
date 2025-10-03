@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Janji Temu - VetCare</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="../../images/paw.png" />
+    <link rel="stylesheet" href="../../css/style.css" />
+  </head>
+  <body class="dashboard-layout-body">
+    <nav class="sidebar-nav" id="sidebar">
+      <div class="sidebar-menu-container">
+        <div class="sidebar-menu-list">
+          <a
+            href="../vet.html"
+            class="sidebar-nav-link group"
+          >
+            <svg
+              class="sidebar-nav-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+              />
+            </svg>
+            Dasbor
+          </a>
+
+          <a
+            href="../setup.html"
+            class="sidebar-nav-link group"
+          >
+            <svg
+              class="sidebar-nav-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2-2v12a2 2 0 002 2z"
+              />
+            </svg>
+            Jadwal
+          </a>
+
+          <a
+            href="../appointments.html"
+            class="sidebar-nav-link group sidebar-nav-link-active"
+          >
+            <svg
+              class="sidebar-nav-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+              />
+            </svg>
+            Janji Temu
+          </a>
+
+          <a
+            href="../profile.html"
+            class="sidebar-nav-link group"
+          >
+            <svg
+              class="sidebar-nav-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+              />
+            </svg>
+            Profil
+          </a>
+        </div>
+      </div>
+
+      <div class="sidebar-logout-container">
+        <a class="sidebar-logout-button" href="../../login.html">
+          <svg
+            class="sidebar-nav-icon"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+            />
+          </svg>
+          Keluar
+        </a>
+      </div>
+    </nav>
+
+    <div class="dashboard-sidebar-overlay hidden" id="sidebar-overlay"></div>
+
+    <div class="dashboard-main-container">
+      <main class="dashboard-main-content">
+        <div id="content">
+          <div class="appointment-details-dashboard">
+            <div class="appointment-details-container">
+              <a
+                href="../appointments.html"
+                class="appointment-details-back-link"
+                >← Kembali ke Janji Temu</a
+              >
+
+              <div class="appointment-details-card">
+                <div class="appointment-details-header">
+                  <div class="appointment-details-title">Detail Janji Temu</div>
+                  <span
+                    class="appointment-details-status-badge appointment-details-status-cancelled"
+                    >DIBATALKAN</span
+                  >
+                </div>
+
+                <div class="appointment-details-content">
+                  <div class="appointment-details-grid">
+                    <div class="appointment-details-item">
+                      <div class="appointment-details-label">
+                        Tanggal & Waktu
+                      </div>
+                      <div class="appointment-details-value">
+                        01 Oktober 2025, 18:45
+                      </div>
+                    </div>
+
+                    <div class="appointment-details-item">
+                      <div class="appointment-details-label">Durasi</div>
+                      <div class="appointment-details-value">60 menit</div>
+                    </div>
+
+                    <div class="appointment-details-item">
+                      <div class="appointment-details-label">Waktu Selesai</div>
+                      <div class="appointment-details-value">19:45</div>
+                    </div>
+
+                    <div class="appointment-details-item">
+                      <div class="appointment-details-label">
+                        Hewan Peliharaan
+                      </div>
+                      <div class="appointment-details-value">
+                        Bella (Anjing)
+                      </div>
+                    </div>
+
+                    <div class="appointment-details-item">
+                      <div class="appointment-details-label">Veterinarian</div>
+                      <div class="appointment-details-value">
+                        Maya Kusuma (Hewan Kecil)
+                      </div>
+                    </div>
+
+                    <div class="appointment-details-item">
+                      <div class="appointment-details-label">Pemilik</div>
+                      <div class="appointment-details-value">Budi Santoso</div>
+                    </div>
+                  </div>
+
+                  <div class="appointment-details-notes-section">
+                    <div class="appointment-details-notes-title">Catatan</div>
+                    <div class="appointment-details-notes-content">
+                      Follow up Bella.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="appointment-details-card">
+                <div class="appointment-details-header">
+                  <div class="appointment-details-title">
+                    Tambah/Perbarui Catatan
+                  </div>
+                </div>
+                <div class="appointment-details-content">
+                  <form
+                    action=""
+                    method=""
+                  >
+                    <div class="appointment-details-form-group">
+                      <label for="notes" class="appointment-details-form-label"
+                        >Catatan</label
+                      >
+                      <textarea
+                        id="notes"
+                        name="notes"
+                        class="appointment-details-form-textarea"
+                      >
+Follow up Bella.</textarea
+                      >
+                    </div>
+
+                    <div class="appointment-details-form-actions">
+                      <button
+                        type="submit"
+                        class="appointment-details-btn-primary"
+                      >
+                        Simpan Catatan
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <button
+      type="button"
+      class="dashboard-toggle-button"
+      id="mobile-menu-button"
+    >
+      <svg
+        class="dashboard-toggle-icon"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        id="arrow-icon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M9 5l7 7-7 7"
+        />
+      </svg>
+    </button>
+
+    <script src="../../js/sidebarModule.js"></script>
+  </body>
+</html>

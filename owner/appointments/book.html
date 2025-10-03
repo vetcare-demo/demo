@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buat Janji Temu - VetCare</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="../../images/paw.png" />
+    <link rel="stylesheet" href="../../css/style.css" />
+  </head>
+  <body class="dashboard-layout-body">
+    <nav class="sidebar-nav" id="sidebar">
+      <div class="sidebar-menu-container">
+        <div class="sidebar-menu-list">
+          <a href="../owner.html" class="sidebar-nav-link group">
+            <svg
+              class="sidebar-nav-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+              />
+            </svg>
+            Dasbor
+          </a>
+
+          <a href="../pets.html" class="sidebar-nav-link group">
+            <svg
+              class="sidebar-nav-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+              />
+            </svg>
+            Hewan Saya
+          </a>
+
+          <a
+            href="../appointments.html"
+            class="sidebar-nav-link group sidebar-nav-link-active"
+          >
+            <svg
+              class="sidebar-nav-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+              />
+            </svg>
+            Janji Temu
+          </a>
+
+          <a href="../profile.html" class="sidebar-nav-link group">
+            <svg
+              class="sidebar-nav-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+              />
+            </svg>
+            Profil
+          </a>
+        </div>
+      </div>
+
+      <div class="sidebar-logout-container">
+        <a class="sidebar-logout-button" href="../login.html">
+          <svg
+            class="sidebar-nav-icon"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+            />
+          </svg>
+          Keluar
+        </a>
+      </div>
+    </nav>
+
+    <div class="dashboard-sidebar-overlay hidden" id="sidebar-overlay"></div>
+
+    <div class="dashboard-main-container">
+      <main class="dashboard-main-content">
+        <div id="content">
+          <div class="book-appointment-dashboard">
+            <div class="book-appointment-container">
+              <div class="book-appointment-form-card">
+                <div class="book-appointment-header">
+                  <h1 class="book-appointment-title">Buat Janji Temu Baru</h1>
+                </div>
+
+                <form action="" method="" class="book-appointment-form">
+                  <div class="book-appointment-form-section">
+                    <div class="book-appointment-form-group">
+                      <label
+                        for="petId"
+                        class="book-appointment-form-label required"
+                        >Pilih Hewan Peliharaan</label
+                      >
+                      <select
+                        id="petId"
+                        name="petId"
+                        class="book-appointment-form-select"
+                        required
+                      >
+                        <option value="">Pilih hewan peliharaan Anda</option>
+                        <option value="1">Bella (Anjing)</option>
+                        <option value="2">Milo (Kucing)</option>
+                        <option value="11">Nemo (Ikan)</option>
+                      </select>
+                    </div>
+
+                    <div class="book-appointment-form-group">
+                      <label
+                        for="veterinarianId"
+                        class="book-appointment-form-label required"
+                        >Pilih Veterinarian</label
+                      >
+                      <select
+                        id="veterinarianId"
+                        name="veterinarianId"
+                        class="book-appointment-form-select"
+                        required
+                      >
+                        <option value="">Pilih veterinarian</option>
+                        <option value="6">Maya Kusuma (Hewan Kecil)</option>
+                        <option value="7">
+                          Andi Setiawan (Bedah Veteriner)
+                        </option>
+                        <option value="8">
+                          Rina Suharta (Dermatologi Hewan)
+                        </option>
+                        <option value="9">Bayu Prasetyo (Hewan Eksotis)</option>
+                      </select>
+                    </div>
+
+                    <div class="book-appointment-form-group">
+                      <label
+                        for="appointmentDate"
+                        class="book-appointment-form-label required"
+                        >Tanggal Janji Temu</label
+                      >
+                      <div class="book-appointment-date-container">
+                        <input
+                          type="date"
+                          id="appointmentDate"
+                          name="appointmentDate"
+                          class="book-appointment-form-input"
+                          min="2025-09-30"
+                          required
+                        />
+                        <svg
+                          class="book-appointment-calendar-icon"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+
+                    <div class="book-appointment-form-group">
+                      <label
+                        for="appointmentTime"
+                        class="book-appointment-form-label required"
+                        >Waktu Janji Temu</label
+                      >
+                      <select
+                        id="appointmentTime"
+                        name="appointmentTime"
+                        class="book-appointment-form-select"
+                        required
+                        disabled
+                      >
+                        <option value="">
+                          Pilih tanggal dan veterinarian terlebih dahulu
+                        </option>
+                      </select>
+                      <p class="book-appointment-form-help">
+                        Waktu tersedia berdasarkan jadwal veterinarian
+                      </p>
+                    </div>
+
+                    <div class="book-appointment-form-group">
+                      <label
+                        for="durationMinutes"
+                        class="book-appointment-form-label required"
+                        >Durasi Janji Temu</label
+                      >
+                      <select
+                        id="durationMinutes"
+                        name="durationMinutes"
+                        class="book-appointment-form-select"
+                        required
+                        disabled
+                      >
+                        <option value="">Pilih waktu terlebih dahulu</option>
+                      </select>
+                      <p class="book-appointment-form-help">
+                        Opsi durasi berdasarkan sisa jam kerja veterinarian
+                      </p>
+                    </div>
+
+                    <div class="book-appointment-form-actions">
+                      <button type="submit" class="book-appointment-btn-submit">
+                        <svg
+                          class="book-appointment-btn-icon"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                          ></path>
+                        </svg>
+                        Buat Janji Temu
+                      </button>
+                      <a
+                        href="../appointments.html"
+                        class="book-appointment-btn-cancel"
+                      >
+                        <svg
+                          class="book-appointment-btn-icon"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12"
+                          ></path>
+                        </svg>
+                        Batal
+                      </a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <button
+      type="button"
+      class="dashboard-toggle-button"
+      id="mobile-menu-button"
+    >
+      <svg
+        class="dashboard-toggle-icon"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        id="arrow-icon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M9 5l7 7-7 7"
+        />
+      </svg>
+    </button>
+
+    <script src="../../js/sidebarModule.js"></script>
+  </body>
+</html>

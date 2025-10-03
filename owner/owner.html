@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dasbor Pemilik - VetCare</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="../images/paw.png" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body class="dashboard-layout-body">
+    <nav class="sidebar-nav" id="sidebar">
+      <div class="sidebar-menu-container">
+        <div class="sidebar-menu-list">
+          <a
+            href="owner.html"
+            class="sidebar-nav-link group sidebar-nav-link-active"
+          >
+            <svg
+              class="sidebar-nav-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+              />
+            </svg>
+            Dasbor
+          </a>
+
+          <a href="pets.html" class="sidebar-nav-link group">
+            <svg
+              class="sidebar-nav-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+              />
+            </svg>
+            Hewan Saya
+          </a>
+
+          <a
+            href="appointments.html"
+            class="sidebar-nav-link group"
+          >
+            <svg
+              class="sidebar-nav-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+              />
+            </svg>
+            Janji Temu
+          </a>
+
+          <a
+            href="profile.html"
+            class="sidebar-nav-link group"
+          >
+            <svg
+              class="sidebar-nav-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+              />
+            </svg>
+            Profil
+          </a>
+        </div>
+      </div>
+
+      <div class="sidebar-logout-container">
+        <a class="sidebar-logout-button" href="../login.html">
+          <svg
+            class="sidebar-nav-icon"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+            />
+          </svg>
+          Keluar
+        </a>
+      </div>
+    </nav>
+
+    <div class="dashboard-sidebar-overlay hidden" id="sidebar-overlay"></div>
+
+    <div class="dashboard-main-container">
+      <main class="dashboard-main-content">
+        <div id="page-content">
+          <div class="owner-dashboard">
+            <div class="owner-dashboard-container">
+              <div class="owner-welcome-card">
+                <div class="owner-welcome-header">
+                  <div>
+                    <h1 class="owner-welcome-title">
+                      Selamat Datang,
+                      <span>Budi Santoso</span>!
+                    </h1>
+                    <p class="owner-welcome-subtitle">
+                      Kelola kesehatan hewan peliharaan Anda
+                    </p>
+                  </div>
+                  <div>
+                    <a
+                      href="appointments/book.html"
+                      class="owner-cta-button"
+                    >
+                      <svg
+                        class="owner-cta-icon"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                        ></path>
+                      </svg>
+                      Buat Janji Temu
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="owner-main-grid">
+                <div class="owner-quick-actions-container">
+                  <div class="owner-section-header">
+                    <h2 class="owner-section-title">Aksi Cepat</h2>
+                  </div>
+                  <div class="owner-content-section">
+                    <div class="owner-quick-actions-grid">
+                      <a
+                        href="pets.html"
+                        class="owner-quick-action-card"
+                      >
+                        <div class="owner-quick-action-icon-bg pets">
+                          <svg
+                            class="owner-quick-action-icon"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                            ></path>
+                          </svg>
+                        </div>
+                        <div class="owner-quick-action-content">
+                          <p class="owner-quick-action-title">Kelola Hewan</p>
+                          <p class="owner-quick-action-subtitle">
+                            Atur hewan peliharaan
+                          </p>
+                        </div>
+                      </a>
+
+                      <a
+                        href="appointments/book.html"
+                        class="owner-quick-action-card"
+                      >
+                        <div class="owner-quick-action-icon-bg appointments">
+                          <svg
+                            class="owner-quick-action-icon"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2-2v12a2 2 0 002 2z"
+                            ></path>
+                          </svg>
+                        </div>
+                        <div class="owner-quick-action-content">
+                          <p class="owner-quick-action-title">
+                            Buat Janji Temu
+                          </p>
+                          <p class="owner-quick-action-subtitle">
+                            Jadwalkan konsultasi
+                          </p>
+                        </div>
+                      </a>
+
+                      <a
+                        href="appointments.html"
+                        class="owner-quick-action-card"
+                      >
+                        <div class="owner-quick-action-icon-bg history">
+                          <svg
+                            class="owner-quick-action-icon"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                            ></path>
+                          </svg>
+                        </div>
+                        <div class="owner-quick-action-content">
+                          <p class="owner-quick-action-title">
+                            Lihat Janji Temu
+                          </p>
+                          <p class="owner-quick-action-subtitle">
+                            Riwayat janji temu
+                          </p>
+                        </div>
+                      </a>
+
+                      <a
+                        href="profile.html"
+                        class="owner-quick-action-card"
+                      >
+                        <div class="owner-quick-action-icon-bg profile">
+                          <svg
+                            class="owner-quick-action-icon"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                            ></path>
+                          </svg>
+                        </div>
+                        <div class="owner-quick-action-content">
+                          <p class="owner-quick-action-title">Lihat Profil</p>
+                          <p class="owner-quick-action-subtitle">
+                            Kelola profil pengguna
+                          </p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="owner-stats-container">
+                  <div class="owner-stats-card">
+                    <div class="owner-section-header">
+                      <h2 class="owner-section-title">Statistik</h2>
+                    </div>
+                    <div class="owner-stats-grid">
+                      <div class="owner-stat-item">
+                        <div class="owner-stat-icon-bg pets">
+                          <svg
+                            class="owner-stat-icon"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                            ></path>
+                          </svg>
+                        </div>
+                        <div class="owner-stat-content">
+                          <p class="owner-stat-title">Total Peliharaan</p>
+                          <p class="owner-stat-value">3 hewan</p>
+                        </div>
+                      </div>
+
+                      <div class="owner-stat-item">
+                        <div class="owner-stat-icon-bg appointments">
+                          <svg
+                            class="owner-stat-icon"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2-2v12a2 2 0 002 2z"
+                            ></path>
+                          </svg>
+                        </div>
+                        <div class="owner-stat-content">
+                          <p class="owner-stat-title">Janji Mendatang</p>
+                          <p class="owner-stat-value">1 janji temu</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="owner-pets-card">
+                <div class="owner-pets-header">
+                  <h2 class="owner-section-title">Hewan Peliharaan</h2>
+                  <a
+                    href="pets.html"
+                    class="owner-view-all-link"
+                    >Kelola hewan</a
+                  >
+                </div>
+                <div class="owner-content-section">
+                  <div class="owner-pets-grid">
+                    <div class="owner-pet-card">
+                      <div class="owner-pet-avatar">
+                        <span class="owner-pet-initial">B</span>
+                      </div>
+                      <div class="owner-pet-info">
+                        <p class="owner-pet-name">Bella</p>
+                        <p class="owner-pet-species">Anjing</p>
+                      </div>
+                    </div>
+                    <div class="owner-pet-card">
+                      <div class="owner-pet-avatar">
+                        <span class="owner-pet-initial">M</span>
+                      </div>
+                      <div class="owner-pet-info">
+                        <p class="owner-pet-name">Milo</p>
+                        <p class="owner-pet-species">Kucing</p>
+                      </div>
+                    </div>
+                    <div class="owner-pet-card">
+                      <div class="owner-pet-avatar">
+                        <span class="owner-pet-initial">N</span>
+                      </div>
+                      <div class="owner-pet-info">
+                        <p class="owner-pet-name">Nemo</p>
+                        <p class="owner-pet-species">Ikan</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="owner-appointments-card">
+                <div class="owner-pets-header">
+                  <h2 class="owner-section-title">Janji Temu Mendatang</h2>
+                  <a
+                    href="appointments.html"
+                    class="owner-view-all-link"
+                    >Lihat semua</a
+                  >
+                </div>
+                <div class="owner-content-section">
+                  <div class="owner-appointments-list">
+                    <div class="owner-appointment-card">
+                      <div class="owner-appointment-header">
+                        <div>
+                          <p class="owner-appointment-doctor">
+                            dr. Rina Suharta
+                          </p>
+                          <p class="owner-appointment-pet">Milo - Konsultasi</p>
+                        </div>
+                        <div class="owner-appointment-time-section">
+                          <p class="owner-appointment-time">01 Okt, 14:30</p>
+                          <a
+                            href="appointments.html/5"
+                            class="owner-appointment-detail-link"
+                            >Lihat Detail</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <button
+      type="button"
+      class="dashboard-toggle-button"
+      id="mobile-menu-button"
+    >
+      <svg
+        class="dashboard-toggle-icon"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        id="arrow-icon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M9 5l7 7-7 7"
+        />
+      </svg>
+    </button>
+
+    <script src="../js/sidebarModule.js"></script>
+  </body>
+</html>
